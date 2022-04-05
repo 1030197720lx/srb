@@ -26,7 +26,7 @@ public class AdminIntegralGradeController {
     @GetMapping("/list")
     public R listAll() {
         List<IntegralGrade> list = integralGradeService.list();
-        return R.ok().data("list", list).message("xxxxx");
+        return R.ok().data("list", list).message("获取列表成功");
     }
 
     @ApiOperation(value = "删除积分等级数据", notes = "根据id删除积分等级数据")

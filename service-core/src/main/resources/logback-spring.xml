@@ -58,7 +58,7 @@
             <maxHistory>15</maxHistory>
 
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>1KB</maxFileSize>
+                <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
 
@@ -72,7 +72,7 @@
 
     <!-- 开发环境和测试环境 -->
     <springProfile name="dev,test">
-        <logger name="jw.srb" level="INFO">
+        <logger name="com.lele" level="INFO">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="ROLLING_FILE" />
         </logger>
@@ -80,7 +80,7 @@
 
     <!-- 生产环境 -->
     <springProfile name="prod">
-        <logger name="jw.srb" level="ERROR">
+        <logger name="com.lele" level="ERROR">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="FILE" />
         </logger>

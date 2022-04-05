@@ -18,6 +18,6 @@ mybatis-plus: #mybatis
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:com/lele/srb/core/mapper/xml/*.xml
 
-#logging:
-#  level:
-#    root: error
+logging:
+  level:
+    root: error
