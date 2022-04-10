@@ -2,7 +2,7 @@ package com.lele.srb.core.mapper;
 
 import com.lele.srb.core.pojo.entity.Dict;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lele.srb.core.pojo.entity.dto.ExcelDictDto;
+import com.lele.srb.core.pojo.dto.ExcelDictDto;
 
 import java.util.List;
 

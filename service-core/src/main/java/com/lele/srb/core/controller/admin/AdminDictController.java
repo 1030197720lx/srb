@@ -6,7 +6,7 @@ import com.lele.common.exception.BusinessException;
 import com.lele.common.result.R;
 import com.lele.common.result.ResponseEnum;
 import com.lele.srb.core.pojo.entity.Dict;
-import com.lele.srb.core.pojo.entity.dto.ExcelDictDto;
+import com.lele.srb.core.pojo.dto.ExcelDictDto;
 import com.lele.srb.core.service.DictService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

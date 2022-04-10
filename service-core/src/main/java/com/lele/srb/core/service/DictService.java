@@ -2,7 +2,7 @@ package com.lele.srb.core.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lele.srb.core.pojo.entity.Dict;
-import com.lele.srb.core.pojo.entity.dto.ExcelDictDto;
+import com.lele.srb.core.pojo.dto.ExcelDictDto;
 
 import java.io.InputStream;
 import java.util.List;
@@ -16,9 +16,9 @@ import java.util.List;
  * @since 2022-03-27
  */
 public interface DictService extends IService<Dict> {
-    public void importData(InputStream inputStream);
+     void importData(InputStream inputStream);
 
-    public List<Dict> listByParentId(Long parentId);
+     List<Dict> listByParentId(Long parentId);
 
-    public List<ExcelDictDto> listDictData();
+     List<ExcelDictDto> listDictData();
 }
