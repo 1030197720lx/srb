@@ -35,6 +35,25 @@ public class Swagger2Config {
     }
 
     @Bean
+    public Docket smsApiConfig() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("smsApi")
+                .apiInfo(webApiInfo())
+                .select()
+                .paths(Predicates.and(PathSelectors.regex("/sms/.*")))
+                .build();
+    }
+
+    private ApiInfo smsApiInfo() {
+        return new ApiInfoBuilder()
+                .title("尚融宝api")
+                .description("本文描述xxxxxxx")
+                .version("1.0")
+                .contact(new Contact("lele", "xxxx", "xxx@163.com"))
+                .build();
+    }
+
+    @Bean
     public Docket webApiConfig() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("webApi")
@@ -52,4 +71,6 @@ public class Swagger2Config {
                 .contact(new Contact("lele", "xxxx", "xxx@163.com"))
                 .build();
     }
+
+
 }
