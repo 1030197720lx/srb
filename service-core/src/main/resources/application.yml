@@ -9,11 +9,11 @@ spring:
   datasource: # mysql数据库连接
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://114.55.233.141:3312/srb_core?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3312/srb_core?serverTimezone=GMT%2B8&characterEncoding=utf-8
     username: root
     password: 123456
   redis:
-    host: 114.55.233.141
+    host: 127.0.0.1
     port: 6379
     database: 0
     password:
