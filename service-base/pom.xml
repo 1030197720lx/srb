@@ -31,11 +31,14 @@
 <!--
         swagger ui
 -->
-                <dependency>
+<!--                <dependency>
                     <groupId>io.springfox</groupId>
                     <artifactId>springfox-swagger-ui</artifactId>
-                </dependency>
-
+                </dependency>-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+        </dependency>
 
         <!-- spring boot redis缓存引入 -->
         <dependency>
@@ -63,22 +66,22 @@
             <artifactId>jjwt</artifactId>
         </dependency>
         <!--服务发现-->
-       <!-- <dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!--服务调用-->
-<!--        <dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!--服务容错-->
-<!--        <dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- json解析 -->
         <dependency>
             <groupId>com.alibaba</groupId>

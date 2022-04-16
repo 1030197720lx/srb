@@ -38,7 +38,7 @@ public class Swagger2Config {
     public Docket smsApiConfig() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("smsApi")
-                .apiInfo(webApiInfo())
+                .apiInfo(smsApiInfo())
                 .select()
                 .paths(Predicates.and(PathSelectors.regex("/sms/.*")))
                 .build();

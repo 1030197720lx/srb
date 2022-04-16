@@ -30,7 +30,7 @@ import java.util.List;
  * @since 2022-03-27
  */
 @Api(tags = "数据字典管理")
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/admin/core/dict")
 @Slf4j

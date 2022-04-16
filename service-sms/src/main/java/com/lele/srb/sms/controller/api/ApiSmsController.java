@@ -5,6 +5,7 @@ import com.lele.common.result.R;
 import com.lele.common.result.ResponseEnum;
 import com.lele.common.util.RandomUtils;
 import com.lele.common.util.RegexValidateUtils;
+import com.lele.srb.sms.client.CoreUserInfoClient;
 import com.lele.srb.sms.service.SmsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -17,7 +18,7 @@ import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 @RestController
-@CrossOrigin
+//@CrossOrigin
 @RequestMapping("/api/sms")
 @Api(tags = "短信管理")
 @Slf4j
@@ -28,12 +29,20 @@ public class ApiSmsController {
 
     @Resource
     private RedisTemplate redisTemplate;
+
+    @Resource
+    private CoreUserInfoClient coreUserInfoClient;
+
     @ApiOperation("获取验证码")
     @GetMapping("/send/{mobile}")
     public R send(@ApiParam(value = "手机号",required = true)
                   @PathVariable String mobile){
         Assert.notEmpty(mobile, ResponseEnum.MOBILE_NULL_ERROR);
         Assert.isTrue(RegexValidateUtils.checkCellphone(mobile),ResponseEnum.MOBILE_ERROR);
+
+        Boolean result = coreUserInfoClient.checkMobile(mobile);
+        Assert.isTrue(!result,ResponseEnum.MOBILE_EXIST_ERROR);
+
         String code = RandomUtils.getSixBitRandom();
         String[] param = {code,"5"};
         //smsService.send("18756987512",param);

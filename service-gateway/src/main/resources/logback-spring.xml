@@ -2,7 +2,7 @@
 <configuration>
     <contextName>leleSrb</contextName>
     <!-- 日志的输出目录 -->
-    <property name="log.path" value="D:/srb_log/sms" />
+    <property name="log.path" value="D:/srb_log/gateway" />
 
     <!--控制台日志格式：彩色日志-->
     <!-- magenta:洋红 -->
@@ -72,7 +72,7 @@
 
     <!-- 开发环境和测试环境 -->
     <springProfile name="dev,test">
-        <logger name="com.lele" level="DEBUG">
+        <logger name="com.lele" level="INFO">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="ROLLING_FILE" />
         </logger>

@@ -19,7 +19,7 @@ import java.io.InputStream;
 @Slf4j
 @RequestMapping("/api/oss/file")
 @RestController
-@CrossOrigin
+//@CrossOrigin
 public class FileController {
     @Resource
     private FileService fileService;
