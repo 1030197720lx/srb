@@ -8,7 +8,7 @@ spring:
     name: service-sms # 服务名
 
   redis:
-    host: 114.55.233.141
+    host: 127.0.0.1
     port: 6379
     database: 0
     password:
@@ -26,11 +26,11 @@ spring:
         server-addr: localhost:8848
 
 yuntongxun:
-  server-ip: app.cloopen.com
-  server-port: 8883
-  account-sId: 8aaf07087fe90a32017ff9d144900409
-  account-token: c83320522d9a4282a0ec3c217a660306
-  app-id: 8aaf07087fe90a32017ff9d145880410
+  server-ip:
+  server-port:
+  account-sId:
+  account-token:
+  app-id:
   template-id: 1
 
 feign:

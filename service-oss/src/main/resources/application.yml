@@ -26,7 +26,7 @@ spring:
         server-addr: localhost:8848
 
 aliyun:
-  endpoint: oss-cn-beijing.aliyuncs.com
-  accessKey: 填自己的key
-  accessSecret: 填自己的Secret
-  bucketName: lele-file
+  endpoint:
+  accessKey:
+  accessSecret:
+  bucketName:
